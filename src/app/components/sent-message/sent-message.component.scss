@@ -1,0 +1,10 @@
+@import "../../global-styles/variables";
+
+.sent-message {
+  width: 50%;
+  float: right;
+  padding: 8px;
+  background-color: $colors-bubble-sent;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}

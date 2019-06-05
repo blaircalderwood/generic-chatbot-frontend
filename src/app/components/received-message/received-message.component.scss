@@ -1,0 +1,10 @@
+@import "../../global-styles/variables";
+
+.received-message {
+  width: 50%;
+  float: left;
+  padding: 8px;
+  background-color: $colors-bubble-received;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}

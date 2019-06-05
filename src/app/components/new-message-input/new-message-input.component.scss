@@ -1,0 +1,21 @@
+@import "../../global-styles/variables";
+
+.new-message-input {
+  display: grid;
+  border: black solid 1px;
+
+  &__input-box {
+    grid-column-start: 1;
+    grid-column-end: 11;
+    background-color: $colors-bg-primary;
+    font-size: 1.5rem;
+    border: 0;
+  }
+
+  &__button {
+    grid-column-start: 11;
+    grid-column-end: 12;
+    background-color: $colors-bg-secondary;
+    border: 0;
+  }
+}
