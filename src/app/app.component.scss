@@ -1,0 +1,19 @@
+.app-component {
+  display: grid;
+  height: 100%;
+
+  &__chat-window {
+    grid-row-start: 1;
+    grid-row-end: 10;
+    height: 100%;
+    display: block;
+  }
+
+  &__new-message {
+    margin-top: auto;
+
+    grid-row-start: 10;
+    grid-row-end: 12;
+    align-self: end;
+  }
+}
