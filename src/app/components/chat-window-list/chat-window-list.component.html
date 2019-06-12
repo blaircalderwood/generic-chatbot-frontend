@@ -1,0 +1,8 @@
+<ul ngClass="chat-window-list">
+    <li *ngFor="let message of messages; let i = index">
+      <app-received-message *ngIf="!message.isSentMessage" [message]="message.text">
+      </app-received-message>
+      <app-sent-message *ngIf="message.isSentMessage" [message]="message.text">
+      </app-sent-message>
+    </li>
+  </ul>
