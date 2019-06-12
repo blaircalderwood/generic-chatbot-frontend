@@ -3,6 +3,7 @@
 .new-message-input {
   display: grid;
   border: black solid 1px;
+  align-self: end;
 
   &__input-box {
     grid-column-start: 1;

@@ -1,25 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { BotService } from "../../services/bot/bot.service";
+import { Message } from "../../models/message.model";
 
 @Component({
-  selector: 'app-chat-window',
-  templateUrl: './chat-window.component.html',
-  styleUrls: ['./chat-window.component.scss']
+  selector: "app-chat-window",
+  templateUrl: "./chat-window.component.html",
+  styleUrls: ["./chat-window.component.scss"]
 })
 export class ChatWindowComponent implements OnInit {
+  messages: Message[] = [];
 
-  messages = [
-    {
-      isSentMessage: false,
-      text: 'This is a received message'
-    },
-    {
-      isSentMessage: true,
-      text: 'This is a sent message'
-    }
-  ]
-  constructor() { }
+  constructor(private botService: BotService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  sendMessage = async text => {
+    this.messages.push(new Message(true, text));
+
+    const responseMessage = await this.botService.sendMessage(text);
+
+    this.messages.push(new Message(false, responseMessage));
+  };
 }

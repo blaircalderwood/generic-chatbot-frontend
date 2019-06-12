@@ -1,8 +1,14 @@
 .chat-window {
-  width: 100%;
+  display: grid;
+  height: 98vh;
 
-  &__list {
-    list-style: none;
-    padding-left: 0;
+  &__window-list {
+    grid-row-start: 1;
+    grid-row-end: 11;
+  }
+
+  &__new-message {
+    align-self: end;
+    margin-bottom: 10px;
   }
 }

@@ -1,10 +1,4 @@
 <section id="chat-window" ngClass="chat-window">
-  <ul ngClass="chat-window__list">
-    <li *ngFor="let message of messages; let i = index">
-      <app-received-message *ngIf="!message.isSentMessage" [message]="message.text">
-      </app-received-message>
-      <app-sent-message *ngIf="message.isSentMessage" [message]="message.text">
-      </app-sent-message>
-    </li>
-  </ul>
+  <app-chat-window-list ngClass="chat-window__window-list" [messages]="messages"></app-chat-window-list>
+  <app-new-message-input ngClass="chat-window__new-message" [sendMessage]="sendMessage"></app-new-message-input>
 </section>

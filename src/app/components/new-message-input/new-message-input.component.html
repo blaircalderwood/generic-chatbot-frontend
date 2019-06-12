@@ -1,4 +1,4 @@
 <section ngClass="new-message-input">
-  <input ngClass="new-message-input__input-box">
-  <button type="button" ngClass="new-message-input__button">Send</button>
+  <input ngClass="new-message-input__input-box" [(ngModel)]="message" (keyup.enter)="handleMessageSend(message)">
+  <button type="button" ngClass="new-message-input__button" (click)="handleMessageSend(message)">Send</button>
 </section>
